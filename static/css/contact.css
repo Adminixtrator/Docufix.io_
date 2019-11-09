@@ -1,0 +1,269 @@
+*{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Nunito',sans-serif !important;
+    margin: auto;
+    padding: auto;
+    background-color: #FFFFFF;
+}
+
+
+    .navbar{
+    
+        background-color: #3B1F9E;
+        color: #FFFFFF !important;
+    }
+    .nav-link {
+        color: #FFFFFF !important;
+    }
+    .nav-link:hover{
+        background-color: #FFFFFF !important;
+        color: #3B1F9E !important;
+    }
+    .btn-link:hover{
+        color: #3B1F9E !important;
+        text-decoration: none !important;
+    }
+    
+
+.container-fluid{
+    background-color: #3B1F9E; 
+    height: 300px;
+    color: #FFFFFF;
+}
+
+#container{
+    width: fit-content;
+}
+
+h1{
+    text-align: center;
+    margin: 0em 5em 0em 5em;
+    margin-top: -2em;
+    color: #FFFFFF;
+    padding: -1em;
+    font-weight: bolder;
+}
+
+#row{
+    display: grid;
+    margin-top: 1rem;
+}
+
+h2{
+    font: weight 800; 
+    font-size: 24px;
+    line-height: 33px;
+    margin-top: 2rem !important;
+}
+
+h3{
+    font-size: 16px;
+    line-height: 22px;
+    margin-top: -2em !important;
+}
+
+h2, h3{
+    margin: auto;
+    padding: 1rem !important;
+    color: rgba(51, 51, 51, 0.8); 
+}
+
+.form-box {
+    padding:2em;
+    margin:auto;
+    margin-top: -1em;
+    min-height: 40px;
+}
+
+.form-box input, textarea {
+    width: 100%;
+}
+
+.btn-primary{
+    background-color: #3B1F9E;
+    border-color: #3B1F9E;
+    font-weight: bold;
+    margin: auto;
+}
+
+.btn-primary:hover{
+    text-decoration: none !important;
+    color: #FF9400 !important;
+    font-weight: normal;
+}
+
+@media only screen and (max-width:363px){
+    body{
+        text-align: center;
+        width: fit-content;
+        margin: auto;
+        overflow-x: hidden;
+    }
+
+    .navbar{
+        width: 100%;
+    }
+    
+    h1{
+        color: #3B1F9E;
+        font-size: large;
+        font-weight: 800;
+        text-align: center;
+        margin: auto;
+        margin-top: 3em;
+        margin-bottom: -2em;
+    }
+
+    h2{
+        font-size: medium;
+        padding: .7em !important;
+        margin: 0em;
+        margin-right: -2em;
+        margin-left: -2em;
+        margin-bottom: 1em;
+    }
+
+    h3{
+        font-size: small;
+        padding: 5px !important;
+    }
+
+    .container-fluid{
+        display: none;
+    }
+    
+    #container{
+        width: fit-content;
+        padding: 1em;
+        margin: auto;
+        margin-left: 2em;
+        margin-right: 2em;
+    }
+
+    .form-box{
+        width: 22.5rem;
+        margin: auto;
+        margin-left: -3em;
+        margin-right: -3em;
+        padding: 5px;
+    }
+}
+
+@media only screen and (min-width:364px) and (max-width:504px){
+    body{
+        text-align: center;
+        width: fit-content;
+        margin: auto;
+    }
+
+    .navbar{
+        width: 100%;
+    }
+    
+    h1{
+        color: #3B1F9E;
+        font-size: larger;
+        font-weight: 800;
+        text-align: center;
+        margin-top: 3em;
+        margin-bottom: -2.5em;
+    }
+
+    h2{
+        font-size: larger;
+        padding: 1em !important;
+    }
+
+    h3{
+        padding: 5px !important;
+    }
+
+    .container-fluid{
+        display: none;
+    }
+    
+    #container{
+        width: fit-content;
+        padding: 0em;
+        margin: auto;
+        margin-left: 2em;
+        margin-right: 2em;
+    }
+
+    .form-box{
+        margin: auto;
+        margin-left: -1em;
+        margin-right: -1em;
+        padding: 5px;
+        width: 22em;
+    }
+
+    ul.list-inline.text-center.mt-3.pl-3{
+        margin: 0em !important;
+        padding: 0em !important;
+    }
+
+    #footer{
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    #docufix p {
+        text-align: center !important;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (min-width:385px) and (max-width:504px){
+    .form-box{
+        margin: auto;
+        margin-left: 5px;
+        padding: 0px;
+        width: 25em;
+    }
+
+    body{
+        overflow-x: hidden;
+    }
+
+    #container{
+        margin: auto;
+        padding: auto;
+    }
+}
+
+@media only screen and (min-width:505px) and (max-width:767px){
+    h1{
+        margin: auto;
+        margin-top: -5rem;
+    }
+
+    .form-box{
+        margin: auto;
+        padding: 0px;
+    }
+
+    ul.list-inline.text-center.mt-3.pl-3{
+        margin: 0em !important;
+        padding: 0em !important;
+    }
+
+    #footer{
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    #docufix p {
+        text-align: center !important;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 991px){
+    ul.list-inline.text-center.mt-3.pl-3{
+        margin: 0em !important;
+    }
+}

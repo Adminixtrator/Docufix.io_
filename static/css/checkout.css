@@ -1,0 +1,44 @@
+.bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+.details-form1 {
+        position: absolute;
+        width: 613px;
+        height: 831px;
+        left: 80px;
+        top: 150px;
+        }
+.details-form2 {
+        position: absolute;
+        width: 613px;
+        height: 831px;
+        left: 747px;
+        top: 150px;
+        }
+
+.checkout{
+          position: absolute;
+width: 196px;
+height: 61px;
+left: 88px;
+top: 100px;
+
+font-family: Nunito;
+font-style: normal;
+font-weight: bold;
+font-size: 45px;
+line-height: 61px;
+
+color: #3B1F9E;
+        }
+
+@media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }

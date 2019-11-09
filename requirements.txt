@@ -1,0 +1,8 @@
+flask
+pytesseract
+tesseract
+requests
+pillow
+fpdf
+python-docx
+docx

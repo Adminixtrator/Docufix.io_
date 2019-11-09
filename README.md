@@ -1,2 +1,3 @@
-# Docufix.io_
-Complete Machine Learning Solution
+# Docufix.io
+
+Created by HNGi6 Interns
