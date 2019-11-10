@@ -1,6 +1,5 @@
 flask
 pytesseract
-tesseract
 requests
 pillow
 fpdf

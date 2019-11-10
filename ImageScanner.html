@@ -72,16 +72,53 @@
             <a class="navbar-brand px-sm-5 ml-3" href="/index"><img src="{{ url_for('static', filename='Docufix_Logo_lnsgsr.svg') }}" alt="DOCUFIX" id="image"></a>
            
           
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            
+              <ul class="navbar-nav ml-auto px-5">
+                <li class="nav-item">
+                  <a class="nav-link text-center" href="{{ about_us }}">About</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle text-center" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Tools
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item text-justify" href="{{ fileUpload }}">Compare files</a>
+                    <a class="dropdown-item text-justify" href="{{ grammerChecker }}">Grammar Check</a>
+                    <a class="dropdown-item text-justify" href="{{ fileDuplicate }}">Duplicates Check</a>
+                    <a class="dropdown-item text-justify" href="{{ plagiarismChecker }}">Plagiarism Check</a>
+                    <a class="dropdown-item text-justify" href="/ImageScanner">Image Scanner</a>
+                    <a class="dropdown-item text-justify" href="{{ paraphrase }}">Paraphrasing tool</a>
+                  </div>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle text-center" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Support
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item text-justify" href="faq.html">FAQ</a>
+                    <a class="dropdown-item text-justify" href="contact.html">Contact Us</a>
+                    <a class="dropdown-item text-justify" href="why-use-docufix.html">Why use Docufix</a>
+                    <a class="dropdown-item text-justify" href="privacy.html">Privacy Policy</a>
+                    <a class="dropdown-item text-justify" href="termsOfService.html">Terms of Service</a>
+                  </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-center" href="teampage.html">Our Team</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-center" href="login.php">Login</a>
+                </li>
+                
+              </ul>
             </div>
           </nav>
     </header>
-
-          <!--Body-->
+        <!--Body-->
         <div id="main">
-
-          
           
             <div class="container mt-5 pt-5" style="min-height: 100vh" >
               <div class="row">

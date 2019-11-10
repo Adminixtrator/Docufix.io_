@@ -1,5 +1,5 @@
-import io
 import os
+import webbrowser as wb
 from flask import Flask, render_template, request, url_for
 import requests
 import pytesseract as pt
@@ -17,7 +17,7 @@ try:
 except:
     print('')
 
-pt.pytesseract.tesseract_cmd = '/app/.apt/usr/bin/tesseract'
+pt.pytesseract.tesseract_cmd = '/usr/bin/tesseract'
 #pt.pytesseract.tesseract_cmd = 'Tesseract-OCR/tesseract.exe'
 
 def _get_image(url):
@@ -51,15 +51,23 @@ def allowed_file(filename):
     
 # IMAGE SCANNER
 @app.route('/', methods=['GET', 'POST'])
-def imageScanner():   
+def ImageScanner():   
+
+    about_us=wb.open('docufix.io/about_us.php')
+    fileUpload=wb.open('docufix.io/fileUpload.php')
+    grammerChecker=wb.open('docufix.io/grammerChecker.php')
+    fileDupliate=wb.open('docufix.io/fileDuplicate.php')
+    plagiarismChecker=wb.open('docufix.io/plagiarismChecker.php')
+    paraphrase=wb.open('docufix.io/paraphrase.php')
+
     if request.method == 'POST':
         # check if there is a file in the request
         if 'file1' not in request.files:
-            return render_template('imageScanner.html',)
+            return render_template('ImageScanner.html', about_us=about_us, fileUpload=fileUpload, grammerChecker=grammerChecker, fileDupliate=fileDupliate, plagiarismChecker=plagiarismChecker,)
         file1 = request.files['file1']
         # if no file is selected
         if file1.filename == '':
-            return render_template('imageScanner.html', msg='No file selected')
+            return render_template('ImageScanner.html', msg='No file selected')
 
         if file1 and allowed_file(file1.filename):
 
@@ -67,14 +75,19 @@ def imageScanner():
             extracted_text = ocr_core(file1)
             # Save as text
             os.chdir('static/')
-            f = open('Docufix.txt', 'w', encoding='utf-8')
+            f = open('Docufix.txt', 'w')
             f.write(extracted_text)
             f.close()
             os.chdir('../')
             # Save as docx
             os.chdir('static/')
-            document.add_paragraph(extracted_text)
-            document.save('Docufix.doc')
+            try:
+                document.add_paragraph(extracted_text)
+                document.save('Docufix.doc')
+            except:
+                return render_template('ImageScanner.html',
+                                   msg='Error occured',
+                                   extracted_text=extracted_text)
             os.chdir('../')
             # Save as pdf
             os.chdir('static/')
@@ -87,7 +100,7 @@ def imageScanner():
                 f.output("Docufix.pdf")
             except:
                 extracted_text='Error occured in file encoding..'
-                return render_template('imageScanner.html',
+                return render_template('ImageScanner.html',
                                    msg='Error occured',
                                    extracted_text=extracted_text)
             os.chdir('../')
@@ -97,16 +110,16 @@ def imageScanner():
             else:
                 extracted_text='Could not identify text in image.. \nPlease check image and try again..'
             # extract the text and display it
-            return render_template('imageScanner.html',
+            return render_template('ImageScanner.html',
                                    msg='Successfully processed',
                                    extracted_text=extracted_text)
         else:
-            return render_template('imageScanner.html',
+            return render_template('ImageScanner.html',
                                    msg='Error occured',
                                    extracted_text='Error occured! Please check your file type and try again')
             
     elif request.method == 'GET':
-        return render_template('imageScanner.html')
+        return render_template('ImageScanner.html')
 
 
     
